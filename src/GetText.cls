@@ -185,7 +185,8 @@ End Function
 '  - embed a carriage return with "%n"
 '  - embed a tab character with "%t"
 '  - enter "comment" mode with "%z"
-'     (stop processing; text after "%z" not passed to output; useful for passing note to translator)
+'     (stop processing; text after "%z" not passed to output;
+'      useful for passing note to translator)
 '
 '@version 1.0 LB 06-Mar-2011
 '@version 1.1 LB 17-Mar-2011
@@ -218,30 +219,48 @@ Attribute sT_.VB_Description = "translate strings, with formatting"
 End Function
 
 '******************************
-'** set locale and other options; must be called *before* calling sT_()
+'** set language and other options; call this first, *before* calling sT_()
 '
 '@param OptionID - set underlying method for loading strings
 '    (this argument is currently IGNORED; set to 0 for compatibility
 '     with future versions)
 '
-'@param sLanguage  - set language for loading strings. This argument is not
-'   needed or desirable. It is better to use the following Registry settings:
-'   if nothing is set, default =
-'   <current user>\Control Panel\International\@sLanguage=
-'   can be overridden by setting
-'   <current user>\Software\VB and VBA Program Settings\<program>\General\@Language
+'@param sLanguage  - set language for loading strings; see discussion.
 '
-'@param sPath - set root folder for strings. This argument is not
-'   needed or desirable. It is better to use the default:
-'   <App.Path>\Lang
-'   which can also be overridden by setting
-'   ...\VB and VBA Program Settings\<program>\General\@GetTextVB Path
+'@param sPath      - set root folder for strings; see discussion.
 '
-'@return True on success
+'DISCUSSION:
+'   Only one method for loading translation strings is implemented,
+'   and that is by reading a special text file; the file consists of
+'   pairs of lines, as follows:
+'       msgid "original string argument to sT_() function"
+'       msgstr ""
 '
-' language file name & location:
-'   for stOptUseTxt, path = (sPath + "\" + sLanguage + "-po.txt")
-'   (example: if language is "ES", save translation file as "<App.Path>\Lang\ES-po.txt")
+'   If there is a string supplied for <msgstr> it will be shown to
+'   the user in place of the original; if not, the original will
+'   be shown. In either case, formatting is done as explained elsewhere.
+'
+'   The file path is determined as:
+'       <sPath>"\"<sLanguage>"-po.txt"
+'
+'   where <sPath> defaults to <application directory>"\Lang",
+'   but may be overridden with the sPath argument.
+'
+'   NOTE: if sT_Init() is called in a DLL, or from the development
+'   environment, the value of <application path> is not certain; in these
+'   cases it is best to set an explicit path.
+'
+'   and <sLanguage> defaults to the value in the Registry under:
+'       <current user>\Control Panel\International\sLanguage="..."
+'   but may be overridden with the sLanguage argument.
+'
+'   So if sLanguage="ENU", and the application folder is "C:\MyProgram",
+'   GetTextVB will by default look for "C:\MyProgram\Lang\ENU-po.txt"
+'
+'@return True on success, False on failure
+'   If this routine fails, the caller can try again with different arguments.
+'   If this routine does not succeed (or is never called) the user will see
+'   the UI strings as hard-coded in the application.
 '
 '@version 1.0 LB 17-Mar-2011
 '
@@ -259,12 +278,7 @@ Attribute sT_Init.VB_Description = "set locale and other options; must be called
     On Error Resume Next
     
     If (Len(sPath) = 0) Then
-        sPath = GetSetting((App.Title), "general", "GetTextVB Path", "")
-        If (Len(sPath) = 0) Then
-            sPath = (App.Path) & "\Lang"
-        ElseIf (InStr(1, sPath, "\") = 0) Then
-            sPath = (App.Path) & "\" & sPath
-        End If
+        sPath = (App.Path) & "\Lang"
     End If
     m_sT_Path = sPath
                 

@@ -180,7 +180,7 @@ End Function
 
 '******************************
 '
-'29-Jan-2012 - add short root names (see WshShell.RegRead)
+'29-Jan-2012 - add short root names
 '
 Private Sub xSplitPath(ByVal Path As String, HRoot As Long, SubKey As String)
 
