@@ -1,0 +1,416 @@
+;***************************************************
+;*** TRANSLATION FILE ***
+;
+; * This file contains translated user interface strings
+; * Loosely based & inspired by GNU GetText
+; * Uses VB module GetText1.bas
+;  - Lindsay Bigelow, April 2001
+;
+; FILE NAME & LOCATION
+;
+;   You must place the file in the "Lang" directory under the
+;   application install directory, and the file must be named
+;   "<locale>-po.txt"
+;
+;   The program looks for the default language under
+;   <current user>\Control Panel\International
+;   under the keyname "sLanguage"
+;
+;   You can override the active language (for testing, etc)
+;   by adding a registry entry under
+;   <current user>\Software\VB and VBA Program Settings\<program>\General
+;   ..and add a new String value: name="Locale", value=<locale>
+;
+; FORMAT OF THIS FILE = 4 lines per string
+;   line 1 = location in source code
+;       (in case meaning is ambiguous and next line doesn't help)
+;   line 2 = text of source code
+;       (supplies context to aid translation)
+;       (NOTE there may be notes for the translator here, following "%n")
+;   line 3 = "msgid" = translation source - DO NOT EDIT
+;       (this is the user-interface text in the 'default' language)
+;   line 4 = "msgstr = translated string in target locale
+;       (SUPPLIED BY TRANSLATOR)
+;
+; EMPTY TRANSLATIONS
+;
+;   if msgstr = "", the source string will pass through to the application
+;
+; SPECIAL CODES in message strings:
+;
+;  - embed a carriage return with <%n>
+;  - embed a tab character with <%t>
+;  - enter "comment" mode with <%z>; any text after "%z" will not
+;    be shown in the program; often seen as %z//<comment>
+;
+;  - make an accelerator key for control & menu items with <&> (eg, "&Open")
+;
+;  - escape literal "%" characters by doubling, ie <%%>
+;  - escape literal "&" characters by doubling, ie <&&>
+;  - escape the double-quote character by doubling, ie <"">
+;
+;***************************************************
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(667)
+; xSetStatus sT_("  (PREVIEW)"), append:=True
+msgid "  (PREVIEW)"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(1758)
+; Prompt = Prompt = sT_("'%1' exists: Please try again, or hit Cancel to quit processing" & vbCrLf & defprompt1, GroupName)
+msgid "'%1' exists: Please try again, or hit Cancel to quit processing"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main.bas(38)
+; MsgBox sT_("Usage: FrapsJoin [optional Fraps(tm) folder]"), vbInformation, sT_("%1 Help", (App.Title))
+msgid "%1 Help"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(1243)
+; xSetStatus sT_("'%1' is not a valid path", GetPathPart(sPath, ppoNameExt))
+msgid "'%1' is not a valid path"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(1292)
+; xSetStatus sT_("%1 item(s)", Cnt)
+msgid "%1 item(s)"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(1164)
+; xSetStatus sT_("%1 item(s) (updated)", Me.lstResult.ListItems.Count)
+msgid "%1 item(s) (updated)"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(1111)
+; .lbl(100).Caption = sT_("&Fraps Folder %n(browse...)")
+msgid "&Fraps Folder %n(browse...)"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(1112)
+; .lbl(101).Caption = sT_("&List of Files %nin this folder")
+msgid "&List of Files %nin this folder"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(1116)
+; .cmd(CMD_PVW).Caption = sT_("&Preview")
+msgid "&Preview"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(1119)
+; .cmd(CMD_GO).Caption = sT_("&Run")
+msgid "&Run"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(1122)
+; .cmd(CMD_UNDO).Caption = sT_("&Undo")
+msgid "&Undo"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(1105)
+; .lblCheck(0).Caption = sT_("&Undo Cleanup")
+msgid "&Undo Cleanup"
+msgstr ""
+
+; E:\Projects\vb\lindsaybigelow\Dialogs\BrowseFoldersSimple.bas(507)
+; sPath = BrowseForFolders( hwndOwner, sT_("(Invalid selection - please try again)"), root, IIf(Len(m_CurrentDirectory), m_CurrentDirectory, m_StartDirectory), AddFolderButton)
+msgid "(Invalid selection - please try again)"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(1125)
+; .cmd(CMD_BROWSE).Caption = sT_("...")
+msgid "..."
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(1963)
+; xSysMenuAdd2 Me, IDM_ABOUT, sT_("About %1...", (App.Title))
+msgid "About %1..."
+msgstr ""
+
+; E:\Projects\vb\lindsaybigelow\Dialogs\BrowseFoldersSimple.bas(709)
+; If (MsgBox(sT_("Are You Sure?"), vbYesNo Or vbExclamation, sT_("Cancel %1", DialogHelpString)) = vbYes) Then
+msgid "Are You Sure?"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\VB6DLL\v1,1\FrapsJoin.cls(520)
+; adsavepath = xPathCheck(m_OutputPath, sT_("Avidemux saved MP4 name"), GroupName, "mp4")
+msgid "Avidemux saved MP4 name"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(1126)
+; .cmd(CMD_BROWSE).ToolTipText = sT_("Browse for a Fraps folder")
+msgid "Browse for a Fraps folder"
+msgstr ""
+
+; E:\Projects\vb\lindsaybigelow\Dialogs\BrowseFoldersSimple.bas(326)
+; MsgBox "Internal Error: " & Error, vbExclamation, sT_("Browse For Computers")
+msgid "Browse For Computers"
+msgstr ""
+
+; E:\Projects\vb\lindsaybigelow\Dialogs\BrowseFoldersSimple.bas(515)
+; MsgBox "Internal Error (" & lineno & "): " & Err.Description, vbExclamation, sT_("Browse For Folders")
+msgid "Browse For Folders"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(1003)
+; If (MsgBox(sT_("Do you want to start browsing from this remote folder? %n" & "(There may be a long delay for initialization)"), vbYesNo Or vbQuestion, sT_("Browse for Fraps folder")) = vbYes) Then
+msgid "Browse for Fraps folder"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(1015)
+; sTmp = BrowseForFolders(Me.hWnd, sT_("Browse for Fraps folder"), BrowseConstants.BROWSE_DESKTOP, startFolder:=startPath)  '--> show dialog
+
+; E:\Projects\vb\lindsaybigelow\Dialogs\BrowseFoldersSimple.bas(709)
+; If (MsgBox(sT_("Are You Sure?"), vbYesNo Or vbExclamation, sT_("Cancel %1", DialogHelpString)) = vbYes) Then
+msgid "Cancel %1"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\VB6DLL\v1,1\FrapsJoin.cls(349)
+; m_Status = sT_("Canceled")
+msgid "Canceled"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\VB6DLL\v1,1\FrapsJoin.cls(637)
+; m_Status = sT_("Canceled")
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\VB6DLL\v1,1\FrapsJoin.cls(496)
+; m_Status = sT_("Canceled")
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\VB6DLL\v1,1\FrapsJoin.cls(459)
+; m_Status = sT_("Canceled")
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\VB6DLL\v1,1\FrapsJoin.cls(409)
+; m_Status = sT_("Canceled")
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\VB6DLL\v1,1\FrapsJoin.cls(560)
+; m_Status = sT_("Canceled")
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(517)
+; xSetStatus sT_("Canceled")
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\VB6DLL\v1,1\FrapsJoin.cls(530)
+; m_Status = sT_("Canceled")
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(1029)
+; xMsgBox sT_("Can't access folder: %1", sEsc(Err.Description))
+msgid "Can't access folder: %1"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\VB6DLL\v1,1\FrapsJoin.cls(347)
+; m_lastError = sT_("Can't access folder: '%1': %2", sEsc(m_WorkPath), sEsc(Err.Description))
+msgid "Can't access folder: '%1': %2"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(820)
+; MsgBox sT_("Can't launch '%1'", Path)
+msgid "Can't launch '%1'"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(1433)
+; xSetStatus sT_("Can't process now - busy")
+msgid "Can't process now - busy"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(1231)
+; xSetStatus sT_("Can't process now - busy")
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(501)
+; xSetStatus sT_("Can't process now - busy")
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(1162)
+; xSetStatus sT_("change in current folder detected")
+msgid "change in current folder detected"
+msgstr ""
+
+; E:\Projects\vb\lindsaybigelow\Dialogs\BrowseFoldersSimple.bas(294)
+; DialogHelpString = sT_("Choose a Computer:")
+msgid "Choose a Computer:"
+msgstr ""
+
+; E:\Projects\vb\lindsaybigelow\Dialogs\BrowseFoldersSimple.bas(438)
+; DialogHelpString = sT_("Choose a Folder:")
+msgid "Choose a Folder:"
+msgstr ""
+
+; E:\Projects\vb\lindsaybigelow\Dialogs\BrowseFoldersSimple.bas(551)
+; DialogHelpString = sT_("Choose a Printer:")
+msgid "Choose a Printer:"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(734)
+; sDisclaim = sT_("Distribute Freely with Attribution %n" & "(Creative Commons Attribution-Share Alike)")
+msgid "Distribute Freely with Attribution %n"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(1003)
+; If (MsgBox(sT_("Do you want to start browsing from this remote folder? %n" & "(There may be a long delay for initialization)"), vbYesNo Or vbQuestion, sT_("Browse for Fraps folder")) = vbYes) Then
+msgid "Do you want to start browsing from this remote folder? %n"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(1128)
+; .cmd(CMD_EXPLORE).Caption = sT_("E&xplore")
+msgid "E&xplore"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(1750)
+; defprompt1 = sT_("Enter name for this group of videos, or hit Enter to accept the default:")
+msgid "Enter name for this group of videos, or hit Enter to accept the default:"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\VB6DLL\v1,1\FrapsJoin.cls(514)
+; m_Status = sT_("Error")
+msgid "Error"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\VB6DLL\v1,1\FrapsJoin.cls(546)
+; m_Status = sT_("Error")
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\VB6DLL\v1,1\FrapsJoin.cls(576)
+; m_Status = sT_("Error")
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\VB6DLL\v1,1\FrapsJoin.cls(339)
+; m_Status = sT_("Error")
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\VB6DLL\v1,1\FrapsJoin.cls(331)
+; m_Status = sT_("Error")
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\VB6DLL\v1,1\FrapsJoin.cls(683)
+; m_Status = sT_("Error")
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\VB6DLL\v1,1\FrapsJoin.cls(601)
+; xAlert sT_("Error (%1): can't rename '%2': %3", 150, prevName, Err.Description), vbExclamation
+msgid "Error (%1): can't rename '%2': %3"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(1484)
+; sErr = sT_("Error: can't find '%1': %2", OldName, Err.Description)
+msgid "Error: can't find '%1': %2"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(1494)
+; sErr = sT_("Error: can't rename '%1' to '%2': %n%3", OldName, NewName, Err.Description)
+msgid "Error: can't rename '%1' to '%2': %n%3"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\VB6DLL\v1,1\FrapsJoin.cls(493)
+; m_AdScriptPath = xPathCheck( m_WorkPath, sT_("generated Avidemux script name"), GroupName, "js")
+msgid "generated Avidemux script name"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\VB6DLL\v1,1\FrapsJoin.cls(527)
+; m_AvScriptPath = xPathCheck( m_WorkPath, sT_("generated Avisynth script name"), GroupName, "avs")
+msgid "generated Avisynth script name"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\VB6DLL\v1,1\FrapsJoin.cls(557)
+; m_VdScriptPath = xPathCheck( m_WorkPath, sT_("generated VirtualDub script name"), GroupName, "vcf")
+msgid "generated VirtualDub script name"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(1540)
+; .cmd(CMD_GO).Caption = sT_("Go !")
+msgid "Go !"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\VB6DLL\v1,1\FrapsJoin.cls(643)
+; m_Status = sT_("no files renamed")
+msgid "no files renamed"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(515)
+; xMsgBox sT_("no valid working folder")
+msgid "no valid working folder"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(1106)
+; .lblCheck(0).ToolTipText = sT_("On Undo, delete any files created in most recent run")
+msgid "On Undo, delete any files created in most recent run"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(1129)
+; .cmd(CMD_EXPLORE).ToolTipText = sT_("Open current folder with Windows Explorer")
+msgid "Open current folder with Windows Explorer"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(1094)
+; .Caption = sT_("Options")
+msgid "Options"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(1098)
+; .Caption = sT_("Process")
+msgid "Process"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(1114)
+; .cboFolder.ToolTipText = sT_("Recent Fraps folders")
+msgid "Recent Fraps folders"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(2184)
+; If (MsgBox(sT_("Rename %1 to %2?", LI.Text, NewString), (vbQuestion Or vbOKCancel Or vbDefaultButton1), sT_("Rename File")) <> vbOK) Then
+msgid "Rename %1 to %2?"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(2184)
+; If (MsgBox(sT_("Rename %1 to %2?", LI.Text, NewString), (vbQuestion Or vbOKCancel Or vbDefaultButton1), sT_("Rename File")) <> vbOK) Then
+msgid "Rename File"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(1120)
+; .cmd(CMD_GO).ToolTipText = sT_("Rename Fraps files by group in the current folder")
+msgid "Rename Fraps files by group in the current folder"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(729)
+; sDescr = sT_("rename Fraps videos in a folder by group")
+msgid "rename Fraps videos in a folder by group"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\VB6DLL\v1,1\FrapsJoin.cls(646)
+; m_Status = sT_("renamed %1 files", m_undocount)
+msgid "renamed %1 files"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(1254)
+; xSetStatus sT_("Scanning '%1'... (press Escape to cancel)", GetPathPart(sPath, ppoNameExt))
+msgid "Scanning '%1'... (press Escape to cancel)"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(1117)
+; .cmd(CMD_PVW).ToolTipText = sT_("See the new file names without actually renaming files")
+msgid "See the new file names without actually renaming files"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(1562)
+; .cmd(CMD_GO).Caption = sT_("Stop")
+msgid "Stop"
+msgstr ""
+
+; E:\Projects\vb\lindsaybigelow\Dialogs\BrowseFoldersSimple.bas(704)
+; If (MsgBox(sT_("This Path Is Required; Please Try Again"), vbOKCancel Or vbQuestion, DialogHelpString) = vbCancel) Then
+msgid "This Path Is Required; Please Try Again"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(1123)
+; .cmd(CMD_UNDO).ToolTipText = sT_("Undo the most recent run (if possible; should be done right away)")
+msgid "Undo the most recent run (if possible; should be done right away)"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main.bas(38)
+; MsgBox sT_("Usage: FrapsJoin [optional Fraps(tm) folder]"), vbInformation, sT_("%1 Help", (App.Title))
+msgid "Usage: FrapsJoin [optional Fraps(tm) folder]"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\VB6DLL\v1,1\FrapsJoin.cls(582)
+; vdsavepath = xPathCheck(m_OutputPath, sT_("VirtualDub saved AVI name"), GroupName, "avi")
+msgid "VirtualDub saved AVI name"
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\v2,6\Main2.frm(590)
+; xSetStatus sT_("Working...")
+msgid "Working..."
+msgstr ""
+
+; E:\Projects\vb\_root\D-F\FrapsJoin\VB6DLL\v1,1\FrapsJoin.cls(393)
+; m_Status = sT_("Working...")
+
