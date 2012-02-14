@@ -1,0 +1,53 @@
+;***************************************************
+;*** TRANSLATION FILE ***
+;
+; * This file contains translated user interface strings
+; * Loosely based & inspired by GNU GetText
+; * Uses VB module GetText1.bas
+;  - Lindsay Bigelow, April 2001
+;
+; FILE NAME & LOCATION
+;
+;   You must place the file in the "Lang" directory under the
+;   application install directory, and the file must be named
+;   "<locale>-po.txt"
+;
+;   The program looks for the default language under
+;   <current user>\Control Panel\International
+;   under the keyname "sLanguage"
+;
+;   You can override the active language (for testing, etc)
+;   by adding a registry entry under
+;   <current user>\Software\VB and VBA Program Settings\<program>\General
+;   ..and add a new String value: name="Locale", value=<locale>
+;
+; FORMAT OF THIS FILE = 4 lines per string
+;   line 1 = location in source code
+;       (in case meaning is ambiguous and next line doesn't help)
+;   line 2 = text of source code
+;       (supplies context to aid translation)
+;       (NOTE there may be notes for the translator here, following "%n")
+;   line 3 = "msgid" = translation source - DO NOT EDIT
+;       (this is the user-interface text in the 'default' language)
+;   line 4 = "msgstr = translated string in target locale
+;       (SUPPLIED BY TRANSLATOR)
+;
+; EMPTY TRANSLATIONS
+;
+;   if msgstr = "", the source string will pass through to the application
+;
+; SPECIAL CODES in message strings:
+;
+;  - embed a carriage return with <%n>
+;  - embed a tab character with <%t>
+;  - enter "comment" mode with <%z>; any text after "%z" will not
+;    be shown in the program; often seen as %z//<comment>
+;
+;  - make an accelerator key for control & menu items with <&> (eg, "&Open")
+;
+;  - escape literal "%" characters by doubling, ie <%%>
+;  - escape literal "&" characters by doubling, ie <&&>
+;  - escape the double-quote character by doubling, ie <"">
+;
+;***************************************************
+
